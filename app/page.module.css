@@ -45,6 +45,6 @@
   }
 }
 @keyframes comingFromRight {
-  0% {transform: translateX(-50vw);}
+  0% {transform: translateX(-25vw);}
   100% {transform: translate(0);}
 }  
