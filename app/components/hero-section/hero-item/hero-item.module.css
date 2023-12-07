@@ -1,0 +1,5 @@
+.heroItem {
+    background-color: rgb(var(--card-rgb));
+    padding: 1rem;
+    box-shadow: inset 1px 0px 5px black;
+}
