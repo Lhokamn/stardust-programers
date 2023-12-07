@@ -18,4 +18,14 @@
 
 .subTitle {
   color: rgba(var(--sub-title-rgba));
+  animation: linear;
+  width: 100%;
+  animation-name: comingFromRight;
+  animation-duration: 1.5s;
 }
+
+@keyframes comingFromRight {
+  0% {position: absolute; margin-left: 40vw}
+  99% { margin-left: 0; position: absolute;}
+  100% {position: relative;}
+}  
