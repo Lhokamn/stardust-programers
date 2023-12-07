@@ -25,7 +25,6 @@
 }
 
 @keyframes comingFromRight {
-  0% {position: absolute; margin-left: 40vw}
-  99% { margin-left: 0; position: absolute;}
-  100% {position: relative;}
+  0% {transform: translateX(-50vw);}
+  100% {transform: translate(0);}
 }  
