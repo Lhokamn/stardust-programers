@@ -8,7 +8,15 @@ export default function HeroSection() {
         {
             route: '/quizz',
             imagePath: '',
-            title: 'quizz'
+            title: 'Quizz'
+        },
+        {   route: '/facts',
+            imagePath: '',
+            title: 'Facts'
+        },
+        {   route: '/solutions',
+            imagePath: '',
+            title: 'Solutions'
         }
     ]
 

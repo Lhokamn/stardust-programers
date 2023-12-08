@@ -1,5 +1,19 @@
-.heroItem {
-    background-color: rgb(var(--card-rgb));
-    padding: 1rem;
+.heroItem{
+    display: flex;
+    margin: 0 3.5rem;
+    background: linear-gradient(145deg, rgba(19,41,39,1) 0%, rgba(42,4,79,1) 50%, rgba(0,0,52,1) 100%);
+    border-radius: 50px;
+}
+
+.heroItemTitle {
+    /* background-color: rgb(var(--card-rgb)); */
     box-shadow: inset 1px 0px 5px black;
+    width: 20vw;
+    height: 55dvh;
+    border: none;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background: none;
+    backdrop-filter: blur(1px);
 }

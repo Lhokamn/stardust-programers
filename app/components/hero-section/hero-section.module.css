@@ -3,3 +3,7 @@
     align-items: center;
     justify-content: center;
 }
+
+.heroSectionRoot .heroItem{
+    color: red;
+}
