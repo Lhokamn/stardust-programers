@@ -15,12 +15,12 @@ nextjs
 ## Hébergement
 vercel.com
 
-## Défi relevé à la nuit de l'info
-https://www.nuitdelinfo.com/inscription/defis/384 
-https://www.nuitdelinfo.com/inscription/defis/328
-https://www.nuitdelinfo.com/inscription/defis/419
-https://www.nuitdelinfo.com/inscription/defis/389
-https://www.nuitdelinfo.com/inscription/defis/409
+## Défis relevés à la nuit de l'info
+ - https://www.nuitdelinfo.com/inscription/defis/384
+ - https://www.nuitdelinfo.com/inscription/defis/328
+ - https://www.nuitdelinfo.com/inscription/defis/419
+ - https://www.nuitdelinfo.com/inscription/defis/389
+ - https://www.nuitdelinfo.com/inscription/defis/409
 
 ### Easter Egg
 Pour avoir accès à l'easter egg, il faut se rendre sur la page quizz :
