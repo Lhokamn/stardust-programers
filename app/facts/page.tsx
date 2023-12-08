@@ -12,7 +12,8 @@ export default function InfiniteFacts() {
 
     const updateFacts = async () => {
         setLoading(true);
-        const newFacts = (await FactsService.getNextFacts()).data;
+        const newFacts = (await FactsService.getNextFacts());
+        Logger.debug(newFacts)
         setFacts(facts => [...facts, ...newFacts]);
     }
 
