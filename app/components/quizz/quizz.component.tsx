@@ -54,7 +54,7 @@ export default function QuestionSection({ questions }: QuizzPropsType) {
             {quizCompleted ? (
                 <div>
                     <h3>Quiz Terminé</h3>
-                    <p>Merci d'avoir répondu à toutes les questions!</p>
+                    <p>Merci d&apos;avoir répondu à toutes les questions!</p>
                     <p>Tu as obtenu la note de <strong>{nbGoodAnswer}/{questions.length}</strong></p>
                 </div>
             ) : (
@@ -71,14 +71,3 @@ export default function QuestionSection({ questions }: QuizzPropsType) {
 
 
 }
-
-{/* <div className={styles.QuizzRoot}>
-            {questions.map((question: QuizzQuestionType) => {
-                return (
-                    <>
-                        <h3>{question.question}</h3>
-                        {question.answers.map((answer: string ) => <button className={styles.BouttonQuizz}>{answer}</button>)}
-                    </>
-                )
-            })}
-        </div> */}
