@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 export default function InfiniteFacts() {
     const [facts, setFacts] = useState<string[]>([]);
-    const [loading, setLoading] = useState<boolean>(false);
+    const [loading, setLoading] = useState<boolean>(true);
 
     const updateFacts = async () => {
         setLoading(true);
@@ -30,7 +30,7 @@ export default function InfiniteFacts() {
     }, []);
 
     useEffect(() => {
-        setLoading(false);
+        facts.length > 0 && setLoading(false);
     } , [facts])
 
     return (
