@@ -12,6 +12,7 @@ export default function SoluceCard(props: any) {
 
 const [cardFlipping, setCardFlipping] = useState(false);
 
+
   return (
     <div className={styles.flipContainer}>
         <div className={[styles.card, cardFlipping && styles.flip].join(' ')}>

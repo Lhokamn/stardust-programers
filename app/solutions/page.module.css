@@ -4,6 +4,7 @@
     justify-content: space-around;
     flex-direction: column;
     min-height: 100dvh;
+    overflow-y: scroll;
 }
 
 .titleBox {
@@ -15,4 +16,8 @@
     flex-direction: row;
     justify-content: space-evenly;
     height: 20dvh;
+    flex-wrap: wrap;
+    gap: 3em;
+    margin: 0 100px;
+    margin-bottom: 250px;
 }
