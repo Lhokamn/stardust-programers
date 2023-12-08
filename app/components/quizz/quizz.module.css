@@ -5,9 +5,9 @@
     align-items: center;
 }
 
-
 .ButtonQuizz{
-    color : white;
+    color : rgb(var(--foreground-rgb));
+    background-color: rgba(var(--card-rgb));
     font-size: 18px;
     /* flex: 1; */
     width: 100%;

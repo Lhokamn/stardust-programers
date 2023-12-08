@@ -7,7 +7,8 @@
     animation: linear;
     animation-name: glowingOff;
     animation-duration: 0.15s;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
+    cursor: pointer !important;
 }
 
 .heroItemTitle {
