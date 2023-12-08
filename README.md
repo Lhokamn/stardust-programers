@@ -25,6 +25,6 @@ https://www.nuitdelinfo.com/inscription/defis/409
 
 ### Easter Egg
 Pour avoir accès à l'easter egg, il faut se rendre sur la page quizz :
-    https://stardust-programmers.cclaudel.fr/quizz
+    https://stardust-programers.vercel.app//quizz
 
 Et il faut répondre faux à la première question ! (Si vous avez eu juste il suffit de recharger la page)
