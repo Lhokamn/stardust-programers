@@ -8,30 +8,34 @@ import Image from 'next/image';
 
 
 
-export default function QuestionSection({questions}: QuizzPropsType){
-    const [count,setCount]= useState(0);
+export default function QuestionSection({ questions }: QuizzPropsType) {
+    const [count, setCount] = useState(0);
+    const [nbGoodAnswer, setnbGoodAnswer] = useState(0);
     const [quizCompleted, setQuizCompleted] = useState(false);
     const [shrekJugement, setshrekJugement] = useState(false);
     const [shrekFuite, setshrekFuite] = useState(false);
 
     const handleButtonClick = (answer: string, correctAnswer: string) => {
-        if(count==0 && answer!=correctAnswer){
+        if (count == 0 && answer != correctAnswer) {
             setshrekJugement(true);
-            setTimeout(()=>{
+            setTimeout(() => {
                 setshrekJugement(false);
                 setshrekFuite(true);
-                setTimeout(()=>{setshrekFuite(false)}, 1200)
-            },1750);
-        }else{
+                setTimeout(() => { setshrekFuite(false) }, 1200)
+            }, 1750);
+        } else {
+            if (answer == correctAnswer) {
+                setnbGoodAnswer((nbGoodAnswer) => nbGoodAnswer + 1)
+            }
             if (count < questions.length - 1) {
-                setCount((prevCount) => prevCount + 1);
+                setCount((count) => count + 1);
             } else {
                 setQuizCompleted(true);
             }
         }
-      };
+    };
 
-    return(
+    return (
         <div className={styles.QuizzRoot}>
             <Image
                 width={100}
@@ -51,20 +55,21 @@ export default function QuestionSection({questions}: QuizzPropsType){
                 <div>
                     <h3>Quiz Terminé</h3>
                     <p>Merci d'avoir répondu à toutes les questions!</p>
-                </div>  
-            ) : (
-            <div className={styles.QuizzRoot}>
-                <h3>{questions[count].question}</h3>
-                <div className={styles.ButtonContainer}>
-                    {questions[count].answers.map((answer: string ) => <button className={styles.ButtonQuizz} aria-label={answer} onClick={() => handleButtonClick(answer, questions[count].correctAnswer)}>{answer}</button>)}
+                    <p>Tu as obtenu la note de <strong>{nbGoodAnswer}/{questions.length}</strong></p>
                 </div>
-            </div>
+            ) : (
+                <div className={styles.QuizzRoot}>
+                    <h3>{questions[count].question}</h3>
+                    <div className={styles.ButtonContainer}>
+                        {questions[count].answers.map((answer: string) => <button className={styles.ButtonQuizz} aria-label={answer} onClick={() => handleButtonClick(answer, questions[count].correctAnswer)}>{answer}</button>)}
+                    </div>
+                </div>
             )}
         </div>
-        
+
     )
 
-    
+
 }
 
 {/* <div className={styles.QuizzRoot}>

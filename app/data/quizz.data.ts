@@ -8,7 +8,7 @@ export const q: QuizzQuestionType[] = [
     {question: 'Nous ne sommes pas tous d\'accord sur ce qui se passe', answers: ['La TV ne nous donne jamais la même réponse','La grande majorité des scientifiques sont d\'accord'], correctAnswer:'La grande majorité des scientifiques sont d\'accord'},
     {question: 'Le réchauffement climatique est bon pour certaine région. Le climat est plus doux',answers:['Ils ont beaucoup de chance, leurs conditions de vie va s\'améliorer','Cela va détruire la faune et la flore'],correctAnswer:'Cela va détruire la faune et la flore'},
     {question: '"Ecoutez, moi il y a les mêmes températures depuis 50 ans"',answers:['Le ressenti d\'une personne ne représente pas la réalité','Ecoutons cette personnes rempli de sagesse de par son age'],correctAnswer:'Le ressenti d\'une personne ne représente pas la réalité'},
-    {question: '',answers:['',''], correctAnswer:''},
+    // {question: 'S\'il y a un réchauffement climatique, pourquoi est ce qu\'il fait encore froid ?',answers:['',''], correctAnswer:''},
     // {question: '',answers:['',''], correctAnswer:''},
 
 ];
