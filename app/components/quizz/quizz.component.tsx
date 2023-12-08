@@ -61,7 +61,7 @@ export default function QuestionSection({ questions }: QuizzPropsType) {
                 <div className={styles.QuizzRoot}>
                     <h3>{questions[count].question}</h3>
                     <div className={styles.ButtonContainer}>
-                        {questions[count].answers.map((answer: string) => <button className={styles.ButtonQuizz} aria-label={answer} onClick={() => handleButtonClick(answer, questions[count].correctAnswer)}>{answer}</button>)}
+                        {questions[count].answers.map((answer: string, key: number) => <button key={key} className={styles.ButtonQuizz} aria-label={answer} onClick={() => handleButtonClick(answer, questions[count].correctAnswer)}>{answer}</button>)}
                     </div>
                 </div>
             )}
