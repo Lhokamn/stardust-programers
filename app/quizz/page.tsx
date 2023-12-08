@@ -7,7 +7,7 @@ export default function Quizz() {
 
     return (
       <main className={styles.main}>
-        <h1 className={styles.title}>C'est l'heure du quizz</h1>
+        <h1 className={styles.title}>C'est l&apos;heure du quizz</h1>
         <h2 className={styles.subTitle}>Le réchauffement climatique</h2>
         <QuestionSection questions={q} ></QuestionSection>
       </main>
