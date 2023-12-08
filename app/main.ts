@@ -1,13 +1,14 @@
 import express from 'express';
 import {router as facts} from './facts/route'
+import { Logger } from './services/logger-service';
+import cors from 'cors';
 
 export const app = express();
+app.use(cors());
+
+Logger.debug('1')
 
 const port = 6969;
-
-app.get('/', (req, res) => {
-    res.json('Hello worldl')
-})
 
 app.use('/facts', facts);
 

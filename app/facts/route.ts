@@ -1,14 +1,13 @@
 import express from 'express';
 import { AzureOpenAiService } from '../services/azure-openai-service';
+import { Logger } from '../services/logger-service';
 
 export const router = express.Router();
 
-router.get('/', async (req, res) => {
-    const userID = req.query.userID;
+router.get('/', async (_, res) => {
+    Logger.debug('Received request at /facts')
 
-    if(!userID) return res.status(422);
-    
-    const data = await AzureOpenAiService.getNext10Facts(userID as string)
+    const data = await AzureOpenAiService.getNext10Facts()
 
     return res.json({data});
 });

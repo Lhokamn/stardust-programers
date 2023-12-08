@@ -1,4 +1,5 @@
 import { AzureKeyCredential, ChatMessage, OpenAIClient } from "@azure/openai";
+import { Logger } from "./logger-service";
 
 export namespace AzureOpenAiService {
 
@@ -10,14 +11,8 @@ export namespace AzureOpenAiService {
 
     const azureOpenaiClient = new OpenAIClient(endpoint, new AzureKeyCredential(apiKey));
 
-    const factsHistoryMap = new Map<string, ChatMessage[]>();
-
-    export const getNext10Facts = async (userID: string): Promise<string[]> => {
-        const factsHistory = factsHistoryMap.get(userID);
-        
-        const messages = factsHistory 
-            ? [...factsHistory, {role: 'system', content: 'give me 10 more facts'}] 
-            : [{role: 'system', content: 'give me 10 facts about climate change'}]; 
+    export const getNext10Facts = async (): Promise<string[]> => {
+        const messages = [{role: 'system', content: 'give me 10 facts about climate change, you will format your message like this : fact1;fact2;fact3...'}]; 
 
         const chatCompletionResult = await azureOpenaiClient.getChatCompletions(deploymentName, messages)
         
@@ -27,10 +22,8 @@ export namespace AzureOpenAiService {
             choice.message && newMessages.push(choice.message);
         }
 
-        const facts = newMessages[0].content?.split('\n').filter(fact => fact !== '');
+        const facts = newMessages[0].content?.split(/\r\n|\r|\n\d+\.\s*/).filter(fact => fact !== '').map(fact => fact.replace('1.', ''));
         if(!facts) throw new Error('Empty new facts');
-
-        factsHistoryMap.set(userID, [...messages, newMessages].flat());
 
         return facts;
     }    
