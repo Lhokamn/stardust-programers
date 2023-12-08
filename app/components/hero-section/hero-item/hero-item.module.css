@@ -11,8 +11,6 @@
 }
 
 .heroItemTitle {
-    /* background-color: rgb(var(--card-rgb)); */
-    /* box-shadow: inset 1px 0px 5px black; */
     width: 20vw;
     height: 55dvh;
     border: none;
