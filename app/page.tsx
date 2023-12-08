@@ -1,6 +1,7 @@
 import HeroSection from './components/hero-section/hero-section.component';
 import styles from './page.module.css'
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
+import Quizz from './pages/quizz/quizzPage';
 
 export default function Home() {
   
@@ -17,6 +18,7 @@ export default function Home() {
       <div className={styles.fullPageWrapper}>
         <HeroSection></HeroSection>
       </div>
+      <Quizz></Quizz>
     </main>
   )
 }
