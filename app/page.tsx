@@ -14,14 +14,6 @@ export default function Home() {
         <div className={styles.titlesWrapper}>
           <h1 className={styles.title}>Le vrai du faux</h1>
           <h2 className={styles.subTitle}>Le réchauffement climatique</h2>
-          <div>
-            <img src="./public/img/ndl_logo.png" alt="Logo Nuit de l'info"></img>
-              <p>Auteur</p>
-            <li>
-              <ul>BERIOT Marc</ul>
-              <ul></ul>
-            </li>
-          </div>
         </div>
         <KeyboardArrowDownRoundedIcon fontSize='large' className={styles.scrollIcon}></KeyboardArrowDownRoundedIcon>
       </div>
