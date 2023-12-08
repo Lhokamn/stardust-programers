@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@azure/openai": "^1.0.0-beta.7",
+    "@types/express": "^4.17.21",
+    "@types/luxon": "^3.3.7",
+    "express": "^4.18.2",
+    "luxon": "^3.4.4"
+  }
+}
