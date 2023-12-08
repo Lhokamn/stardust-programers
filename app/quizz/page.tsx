@@ -1,6 +1,6 @@
 import { count } from 'console';
 import QuestionSection from '@/app/components/quizz/quizz.component';
-import styles from './quizzPage.module.css'
+import styles from './page.module.css'
 import { q } from '@/app/data/quizz.data'
 
 export default function Quizz() {
