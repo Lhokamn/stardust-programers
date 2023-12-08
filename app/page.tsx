@@ -18,7 +18,7 @@ export default function Home() {
       <div className={styles.fullPageWrapper}>
         <HeroSection></HeroSection>
       </div>
-      <Quizz></Quizz>
+      {/* <Quizz></Quizz> */}
     </main>
   )
 }
