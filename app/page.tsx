@@ -2,13 +2,10 @@ import HeroSection from './components/hero-section/hero-section.component';
 import styles from './page.module.css';
 import Router from 'next/router';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
-import Quizz from './quizz/page';
 
 export default function Home() {
   
   return (
-
-
     <main className={styles.main}>
       <div className={styles.fullPageWrapper}>
         <div className={styles.titlesWrapper}>
@@ -21,7 +18,6 @@ export default function Home() {
       <div id="heroSection" className={styles.fullPageWrapper}>
         <HeroSection ></HeroSection>
       </div>
-      {/* <Quizz></Quizz> */}
     </main>
   )
 }
