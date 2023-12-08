@@ -27,7 +27,7 @@ export default function Shrek() {
                 </div>
                 <div className={styles.styledTextContainer}>
                     <p className={styles.styledText}>
-                        Bienvenue dans le monde stylisé ! Ce texte est stylisé avec des propriétés CSS.
+                        Je suis votre assistant IA ChatBot. Malheureusement, je ne suis pas encore en capacité de parler ni comprendre ce que vous dites. D'ailleurs le bouton envoyer ne sert à rien. Mais regardez, je bouge la bouche. :)
                     </p>
                     
                 </div>
