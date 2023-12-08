@@ -1,7 +1,7 @@
 import { AzureOpenAiService } from '@/app/services/azure-openai-service';
 import { Logger } from '@/app/services/logger-service';
 import { NextResponse } from 'next/server';
-export const dynamix = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 export async function GET() {
     Logger.debug('Received request at /facts')
 
