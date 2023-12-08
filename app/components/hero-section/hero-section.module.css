@@ -7,18 +7,3 @@
 .heroSectionRoot .heroItem{
     color: red;
 }
-
-#shrek{
-    position: absolute;
-    left: 0;
-    animation: linear;
-    animation-name: comingFromRight;
-    animation-duration: 2.5s;
-}
-
-@keyframes jugement{ 
-    0%{transform: translateX(0px); background-image: url();}
-    30%{transform: translateX(300px)}
-    70%{transform: translateX(300px)}
-    100%{transform: translateX(0px)}
-}

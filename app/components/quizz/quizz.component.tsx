@@ -3,6 +3,7 @@
 import { QuizzPropsType, QuizzQuestionType } from '@/app/types/quizz/quizz.type';
 import styles from './quizz.module.css'
 import { useState } from 'react';
+import Image from 'next/image';
 
 
 
@@ -10,23 +11,42 @@ import { useState } from 'react';
 export default function QuestionSection({questions}: QuizzPropsType){
     const [count,setCount]= useState(0);
     const [quizCompleted, setQuizCompleted] = useState(false);
-    //const [answer, setAnswer] = useState('');
+    const [shrekJugement, setshrekJugement] = useState(false);
+    const [shrekFuite, setshrekFuite] = useState(false);
 
     const handleButtonClick = (answer: string, correctAnswer: string) => {
-        if(count==0 && answer==correctAnswer){
-            const shrek = document.getElementById("shrek");
-            
-        }
-        if (count < questions.length - 1) {
-            setCount((prevCount) => prevCount + 1);
-        } else {
-            setQuizCompleted(true);
+        if(count==0 && answer!=correctAnswer){
+            setshrekJugement(true);
+            setTimeout(()=>{
+                setshrekJugement(false);
+                setshrekFuite(true);
+                setTimeout(()=>{setshrekFuite(false)}, 1200)
+            },1750);
+        }else{
+            if (count < questions.length - 1) {
+                setCount((prevCount) => prevCount + 1);
+            } else {
+                setQuizCompleted(true);
+            }
         }
       };
 
     return(
         <div className={styles.QuizzRoot}>
-            <div id="shrek"></div>
+            <Image
+                width={100}
+                height={100}
+                src="/img/shrek_abasourdi.png"
+                alt="shrek_abasourdi.png"
+                className={[styles.shrek1, shrekJugement && styles.jugement].join(' ')}
+            />
+            <Image
+                width={100}
+                height={100}
+                src="/img/shrek_fuite.png"
+                alt="shrek_fuite.png"
+                className={[styles.shrek2, shrekFuite && styles.fuite].join(' ')}
+            />
             {quizCompleted ? (
                 <div>
                     <h3>Quiz Terminé</h3>
