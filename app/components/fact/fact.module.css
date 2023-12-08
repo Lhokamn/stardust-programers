@@ -1,0 +1,19 @@
+.fact {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.6);
+    margin: 1rem;
+    border-radius: 1rem;
+    background: linear-gradient(to bottom right, rgba(0,0,0,0) 69%, rgba(255,255,255,0.05));
+}
+
+.factIcon {
+    color: green;
+    margin-right: 1rem;
+}
+
+.factText {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.75);
+}
