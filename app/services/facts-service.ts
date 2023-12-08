@@ -12,7 +12,7 @@ export namespace FactsService {
 
     export const getNextFacts = async () => {
 
-        Logger.debug('Intitiating request at ' + requestUrl);
+        Logger.info('Intitiating request at ' + requestUrl);
 
         return axios.get(requestUrl).then(res => {
             return res.data
