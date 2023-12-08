@@ -22,3 +22,15 @@
     flex-direction: column;
     box-shadow: 0px 0px 5px black;
 }
+
+.loadingIcon {
+    position: sticky;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.loadingIcon.show {
+    display: block;
+}
